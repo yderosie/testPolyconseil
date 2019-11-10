@@ -23,6 +23,7 @@ block = {
 nonce = 0
 
 def getHashRate():
+    global block
     # mesure du hash rate par seconde
     start_time = time.time()
     while (time.time() - start_time <= 1):
@@ -32,7 +33,7 @@ def getHashRate():
 
 
 def scalingDifficulty(target_time):
-    global block, nonce
+    global nonce
     power = 1
 
     if (nonce == 0):
